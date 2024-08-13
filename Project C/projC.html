@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title> Martell Project C</title>
+  </head>
+	<!--	Create the HTML5 'canvas' element in which we will run WebGL
+	-->
+  <body onload="main()" onresize="drawResize()">
+    <canvas id="webgl" width="1200" height="600">
+    Please use a browser that supports "canvas"
+    </canvas>
+	<p>
+	<!-- Make a 'div' element to hold changeable HTML made in our JavaScript file;
+		 (where? look inside main(), inside its 'tick()' function, where we
+		 display the 'current angle' value.
+	-->
+	<div id= ShapeName></div> <div style="text-align:center;width:500px;">
+	<!-- Fill this HTML tag with JavaScript-generated text that names the shape displayed
+	To change shapes, users press the 'Next' button, which calls the 'nextShape()' function-->
+	
+	  <br><br>
+	  Use the arrow keys to move the location of the camera. <br>
+	  Use the M key to zoom in and the N key to zoom out. <br>
+	  Use the WASD keys to control the tilt of the camera. <br>
+	  Use the mouse to control the sphere's light source. <br>
+	</div>
+	
+    
+	<div style="text-align:center;width:500px; float: right; margin-right: 30%; margin-top: -80px;">
+		
+		Use the X key to change between Gouraud, Phong, and no Shading  <br>
+		Use the C key to change between Phong and Blinn-Phong lighting <br>
+		Use the 4 number key to change the material of the objects <br>
+		Use the 5 number key to toggle the Mouse Light source <br>
+		Use the 6 number key to toggle the Camera Light source <br>
+		Use the 7 number key to toggle the Ceiling Light source <br>
+		
+		
+
+
+	</div>
+	<!--	Load in the JavaScript libraries supplied by our textbook 
+			(Matsuda et al., 2013 WebGL Programming Guide) that help us
+			with WebGL programming:
+	-->
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-quat03.js"></script>
+	<script src="./lib/materials_Ayerdi04.js"></script>
+ 
+	<script src="./lib/lights-JT.js"></script>
+    <script src="./projC_lib.js"></script>
+<!--<script src="VBObox-Lib.js"></script>  -->
+	
+	<!--	Finally, load in our own JavaScript program file.
+	-->
+    <script src="projC.js"></script>
+  </body>
+</html>

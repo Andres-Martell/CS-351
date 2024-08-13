@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Project B</title>
+  </head>
+	<!--	Create the HTML5 'canvas' element in which we will run WebGL
+	-->
+  <body onload="main()" onresize="drawResize()">
+    <canvas id="webgl" width="1200" height="600">
+    Please use a browser that supports "canvas"
+    </canvas>
+	<p>
+	<!-- Make a 'div' element to hold changeable HTML made in our JavaScript file;
+		 (where? look inside main(), inside its 'tick()' function, where we
+		 display the 'current angle' value.
+	-->
+	<div id= ShapeName></div> 
+	<!-- Fill this HTML tag with JavaScript-generated text that names the shape displayed
+	To change shapes, users press the 'Next' button, which calls the 'nextShape()' function-->
+	Click the buttons to affect the rotation or change speed <br>
+	<!--
+		<button type="button" onClick='nextShape()'>Next</button><BR> -->
+
+		<!--BUTTONS: commands below create HTML push-buttons with labels
+			Spin <<, runStop, and Spin >>.  
+		When users click the button, HTML calls JavaScript functions
+			"spinDown()", "runStop()" and "spinUp()"   -->
+      <button type="button" onclick="spinDown()"> << Spin  </button>
+	  <button type="button" onclick="runStop()">Run/Stop</button>
+      <button type="button" onclick="spinUp()">Spin >> </button>
+
+	  <br><br>
+	  Use the arrow keys to move the location of the camera. <br>
+	  Use the M key to zoom in and the N key to zoom out. <br>
+	  Use the WASD keys to control the tilt of the camera. <br>
+	  Use the mouse to control the donut. <br>
+	 
+	<!--  Enter numbers to change the frustum camera (enable frustum camera by clicking v)<br>
+	  left: <input id='left' size=10> right: <input id='right' size=10>
+	  bottom: <input id='bottom' size=10> top: <input id='top' size=10>
+	  near: <input id='near' size=10> far: <input id='far' size=10>
+		<button type="button" onClick='submit()'>Submit</button>  -->
+    </p>
+	<!--	Load in the JavaScript libraries supplied by our textbook 
+			(Matsuda et al., 2013 WebGL Programming Guide) that help us
+			with WebGL programming:
+	-->
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-quat03.js"></script>
+	
+	<!--	Finally, load in our own JavaScript program file.
+	-->
+    <script src="projB.js"></script>
+  </body>
+</html>
